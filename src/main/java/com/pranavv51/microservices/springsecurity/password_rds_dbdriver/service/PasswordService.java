@@ -17,9 +17,8 @@ public class PasswordService {
     private PasswordRepo passwordRepo;
 
 
-    public String saveUserWithCred(PasswordModel userModel){
-        passwordRepo.save(userModel);
-        return userModel.toString();
+    public PasswordModel saveUserWithCred(PasswordModel userModel){
+        return passwordRepo.save(userModel);
     }
 
     public PasswordModel getUser(String name){
